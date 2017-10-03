@@ -42,5 +42,7 @@ function bundleForPlatform(platform) {
     throw new Error(stdout);
   }
 
+  console.log(stdout);
+
   expect(fs.existsSync(bundlePath)).toBe(true);
 }

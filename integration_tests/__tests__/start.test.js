@@ -56,6 +56,8 @@ function testPlatform(platform, done) {
       haul.kill();
     }
 
+    console.log(messageBuffer.join('\n'));
+
     if (message.match('Built successfully in ')) {
       const stdout = messageBuffer.join('\n');
       expect(stdout).toMatch('INFO  Ready at http://localhost:8081');
